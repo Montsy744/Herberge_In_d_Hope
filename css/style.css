@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: "parisienne";
+  src: url("./../public/police/Parisienne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "sourGummy";
+  src: url("./../public/police/SourGummy_Expanded-Light.ttf");
+}
+
+:root {
+  --orange: #c89446;
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+}
+
+#header {
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  z-index: 1;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header_img img {
+  width: 70px;
+}
+#liens {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#liens a {
+  margin: 0px 10px;
+  text-decoration: none;
+  color: var(--orange);
+  font-size: 1rem;
+  font-family: "sourGummy";
+}
+
+#contact {
+  padding: 10px;
+  border-radius: 100px;
+  border: solid 3px var(--orange);
+  background-color: rgb(239, 233, 230);
+}
+
+#contact:hover {
+  transform: rotate(10deg);
+  margin: 10px;
+  transition-duration: 0.5s;
+}
+
+#acceuil {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background: url(./../public/img/2022-05-28.jpg) center center / cover
+    no-repeat;
+  color: white;
+  height: 100vh;
+  margin-bottom: 100px;
+}
+
+.baseline {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 20px;
+}
+
+.baseline-welcome {
+  font-family: "Pinyon Script", cursive;
+  color: var(--orange);
+  font-size: 4.3rem;
+  display: block;
+  line-height: 1;
+}
+
+.baseline-name {
+  font-family: "parisienne";
+  display: block;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 5px;
+  padding-bottom: 10px;
+}
+
+.baseline-slogan {
+  font-size: 2rem;
+  font-weight: 300;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#containerApropos {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.title {
+  padding: 0px 20px;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  margin: 1rem 0 0 0;
+}
+
+.title span {
+  font-family: "Pinyon Script", cursive;
+  color: var(--orange);
+  font-size: 2.5rem;
+  display: block;
+  text-transform: none;
+}
+
+.title::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--orange);
+  margin-bottom: 0.5rem;
+}
+
+.block-centered .title {
+  text-align: center;
+}
+
+.block-right {
+  margin-top: 20px;
+}
+
+.block-body p {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.block-img {
+  border: solid 1px #c89446;
+}
+
+.block-img img {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.underline-effect {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--orange);
+  transition: width 0.3s ease-out;
+}
+
+.underline-effect:hover::after {
+  width: 100%;
+}
