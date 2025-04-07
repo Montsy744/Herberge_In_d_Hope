@@ -1,17 +1,19 @@
-// Sélectionnez le header
+// Sélectionnez le header et la div #acceuil
 const header = document.querySelector("header");
+const accueil = document.querySelector("#acceuil");
 
-// Ajoutez un gestionnaire d'événements pour le défilement
-window.addEventListener("scroll", () => {
-  const scrolledToBottom =
-    window.innerHeight + window.scrollY >= document.body.offsetHeight;
-  const scrolledToTop = window.scrollY === 0;
-
-  if (scrolledToBottom) {
-    // Changez la couleur de fond du header en noir
-    header.style.backgroundColor = "black";
-  } else if (scrolledToTop) {
-    // Changez la couleur de fond du header en semi-transparent
-    header.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-  }
+// Créez un observateur pour suivre les entrées et sorties de la div #acceuil
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Lorsque #acceuil est visible dans l'écran
+      header.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+    } else {
+      // Lorsque #acceuil sort de l'écran
+      header.style.backgroundColor = "black";
+    }
+  });
 });
+
+// Démarrez l'observation de la div #acceuil
+observer.observe(accueil);
