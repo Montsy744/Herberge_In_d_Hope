@@ -64,7 +64,7 @@ header {
 #contact:hover {
   transform: rotate(10deg);
   margin: 10px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 #acceuil {
@@ -92,6 +92,8 @@ header {
   font-size: 4.3rem;
   display: block;
   line-height: 1;
+  animation: zoomIn;
+  animation-duration: 1s;
 }
 
 .baseline-name {
@@ -102,6 +104,8 @@ header {
   font-weight: 700;
   letter-spacing: 5px;
   padding-bottom: 10px;
+  animation: zoomIn;
+  animation-duration: 1.5s;
 }
 
 .baseline-slogan {
@@ -110,6 +114,8 @@ header {
   display: block;
   text-transform: uppercase;
   letter-spacing: 2px;
+  animation: zoomIn;
+  animation-duration: 2s;
 }
 
 #containerApropos {
