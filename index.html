@@ -40,8 +40,10 @@
           />
         </div>
         <div id="liens">
+          <a href="#acceuil" id="" class="underline-effect">Accueil</a>
           <a href="#Apropos" class="underline-effect">A propos</a>
-          <a href="#" id="" class=""></a>
+          <a href="#nosService" class="underline-effect">Nos Services</a>
+          <a href="#" id="" class="underline-effect">Infos pratiques</a>
           <a href="#" id="contact">Nous contacter</a>
         </div>
       </div>
@@ -53,12 +55,12 @@
         <span class="baseline-slogan">Spécialité régionale</span>
       </div>
     </div>
-    <section id="Apropos">
+    <div id="Apropos">
       <div id="containerApropos">
         <div class="block block-centered">
           <div class="block-body">
             <h2 class="title"><span>Oaver ons</span> A propos de nous</h2>
-            <p>
+            <p class="reveal" data-delay="0.3">
               Bienvenue à l'Herberge in d'Hope, nichée en plein cœur du
               charmante village de Volckerinckhove. C’est avec grand plaisir que
               nous vous ouvrons les portes de notre établissement, où
@@ -76,17 +78,17 @@
         </div>
         <div class="block block-right">
           <div class="avecFlex">
-            <div class="block-img">
+            <div class="block-img reveal" data-delay="0.5">
               <img
                 src="./public/img/convivialité.jpg"
                 alt="convivialité en image"
               />
             </div>
             <div class="block-body">
-              <h2 class="title">
+              <h2 class="title reveal" data-delay="0.3">
                 <span></span>Une ambiance conviviale pour tous
               </h2>
-              <p>
+              <p data-delay="0.3" class="reveal">
                 Une ambiance conviviale pour tous Profitez d’une ambiance
                 chaleureuse et accueillante, que ce soit sur place ou à la
                 maison. Notre service de plats à emporter et de livraison vous
@@ -98,7 +100,7 @@
             </div>
           </div>
 
-          <p id="texteDessous">
+          <p id="texteDessous" data-delay="0.5" class="reveal">
             Vous organisez un événement ? Comptez sur nous pour vous offrir un
             service de qualité, adapté à vos besoins. Nous avons à cœur de
             rendre notre établissement accessible à tous. C’est pourquoi nous
@@ -109,8 +111,77 @@
           </p>
         </div>
       </div>
-    </section>
+      <div id="motDuChef">
+        <div id="textDuChef">
+          <h2 id="titreDuchef">
+            <span>’t Woord van den chef</span> Mot Du chef
+          </h2>
+        </div>
+        <div id="containerDuChef">
+          <div>
+            <p data-delay="0.3" class="reveal">
+              Le Lorem Ipsum est simplement du faux texte employé dans la
+              composition et la mise en page avant impression. Le Lorem Ipsum
+              est le faux texte standard de l'imprimerie depuis les années 1500,
+              quand un imprimeur anonyme assembla ensemble des morceaux de texte
+              pour réaliser un livre spécimen de polices de texte. Il n'a pas
+              fait que survivre cinq siècles, mais s'est aussi adapté à la
+              bureautique informatique
+            </p>
+          </div>
 
+          <img
+            src="./public/img/lesChefs-removebg-preview.png"
+            alt="photo des patrons"
+            data-delay="0.5"
+            class="reveal"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="nosService">
+      <div id="containernosService">
+        <div class="containerElementService block-right block">
+          <div class="avecFlex">
+            <div class="block-img reveal" data-delay="0.7">
+              <img src="./public/img/service.jpg" alt="exterieure des salles" />
+            </div>
+            <div class="block block-centered">
+              <div class="block-body">
+                <h2 class="title reveal servicesTitre" data-delay="0.3">
+                  <span>Oze diensten</span>Nos services
+                </h2>
+                <ul class="listServices reveal" data-delay="0.5">
+                  <hr />
+                  <li>Accessible aux personnes à mobilité réduite</li>
+                  <hr />
+                  <li>Service traiteur</li>
+                  <hr />
+                  <li>Coin enfants</li>
+                  <hr />
+                  <li>Terrasse</li>
+                  <hr />
+                  <li>Parking en libre-service</li>
+                  <hr />
+                  <li>Événements privés</li>
+                  <hr />
+                  <li>Coin fumeurs</li>
+                  <hr />
+                  <li>À emporter</li>
+                  <hr />
+                  <li>Réceptions de mariage</li>
+                  <hr />
+                  <li>Wi-Fi gratuit</li>
+                  <hr />
+                  <li>Animaux domestiques autorisés</li>
+                  <hr />
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--<div class="container">
       <a href="#" class="button type--C">
         <div class="button__line"></div>
