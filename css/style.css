@@ -342,6 +342,25 @@ header {
   margin: 20px 0px;
 }
 
+#containerHorraire {
+  padding: 30px;
+}
+
+.jours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jours p {
+  font-family: "sourGummy";
+  font-size: 1.3rem;
+}
+
+.jourHorraire {
+  color: var(--orange);
+}
+
 .underline-effect {
   position: relative;
   text-decoration: none;
