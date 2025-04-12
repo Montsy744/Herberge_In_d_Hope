@@ -361,6 +361,43 @@ header {
   color: var(--orange);
 }
 
+footer {
+  background-color: #000;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container > * {
+  font-size: 1.3rem;
+  color: grey;
+}
+.middle {
+  padding: 10px;
+  border-right: solid 2px grey;
+  border-left: solid 2px grey;
+}
+.middle a {
+  margin: 100px 5px;
+  text-decoration: none;
+  color: grey;
+}
+
+.middle a:hover {
+  color: var(--orange);
+  transition-duration: 1s;
+}
+.droite img {
+  width: 50%;
+}
+.droite {
+  width: 18.75rem;
+}
+
 .underline-effect {
   position: relative;
   text-decoration: none;
