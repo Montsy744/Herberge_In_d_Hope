@@ -77,7 +77,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: end;
-  background: url(./../public/img/2022-05-28.jpg) center center / cover
+  background: url(./../public/img/herbergeFacade.jpg) center center / cover
     no-repeat;
   color: white;
   height: 100vh;
