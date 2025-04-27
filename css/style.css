@@ -446,6 +446,13 @@ footer {
 #contact-gauche img {
   width: 80%;
   margin: 20px;
+  border-radius: 20px;
+}
+
+#contact-gauche img:hover {
+  transform: scale(1.1);
+  transition-duration: 1s;
+  margin: 40px;
 }
 
 .underline-effect {
