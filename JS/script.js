@@ -58,3 +58,17 @@ elements.forEach((element) => {
   element.style.setProperty("--delay", `${delay}s`);
   observer2.observe(element);
 });
+
+
+const modalBouttonGoogle = document.querySelector("#carte");
+const modalBouttonQuitte = document.querySelector("#noButton");
+
+modalBouttonGoogle.addEventListener("click", function () {
+  const modal = document.querySelector("#modalGoogle");
+  modal.style.display = "block";
+});
+
+modalBouttonQuitte.addEventListener("click", function () {
+  const modal = document.querySelector("#modalGoogle");
+  modal.style.display = "none";
+});
