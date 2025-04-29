@@ -62,6 +62,7 @@ elements.forEach((element) => {
 
 const modalBouttonGoogle = document.querySelector("#carte");
 const modalBouttonQuitte = document.querySelector("#noButton");
+const modalBouttonQuitte2 = document.querySelector("#yesButton");
 
 modalBouttonGoogle.addEventListener("click", function () {
   const modal = document.querySelector("#modalGoogle");
@@ -71,4 +72,10 @@ modalBouttonGoogle.addEventListener("click", function () {
 modalBouttonQuitte.addEventListener("click", function () {
   const modal = document.querySelector("#modalGoogle");
   modal.style.display = "none";
+});
+
+modalBouttonQuitte2.addEventListener("click", function () {
+  const modal = document.querySelector("#modalGoogle");
+  modal.style.display = "none";
+  window.open("https://www.google.fr/maps/place/Restaurant+Herberge+In+d'Hope/@50.8405556,2.2991667,713m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47dcf7759a9c8033:0x41f85c7381396944!8m2!3d50.8405556!4d2.2991667!16s%2Fg%2F1tm1pr5l?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D", "_blank");
 });
