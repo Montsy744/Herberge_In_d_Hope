@@ -79,3 +79,13 @@ modalBouttonQuitte2.addEventListener("click", function () {
   modal.style.display = "none";
   window.open("https://www.google.fr/maps/place/Restaurant+Herberge+In+d'Hope/@50.8405556,2.2991667,713m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47dcf7759a9c8033:0x41f85c7381396944!8m2!3d50.8405556!4d2.2991667!16s%2Fg%2F1tm1pr5l?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D", "_blank");
 });
+
+const facebook = document.querySelector(".facebook");
+const instagram = document.querySelector(".instagram");
+
+facebook.addEventListener("click", function () {
+  window.open("https://www.facebook.com/LucieCloet", "_blank");
+});
+instagram.addEventListener("click", function () {
+  window.open("https://www.instagram.com/herberge.indhope/", "_blank");
+});
