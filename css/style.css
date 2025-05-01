@@ -179,7 +179,6 @@ header {
   font-size: 1.3rem;
 }
 
-
 .title {
   padding: 0px 20px;
   letter-spacing: 2px;
@@ -370,12 +369,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px
+  height: 400px;
 }
 
 #PhotosHaut div img {
   height: 400px;
-  width: 533.333px
+  width: 533.333px;
 }
 
 #PhotosBas {
@@ -390,7 +389,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px
+  height: 400px;
 }
 
 #PhotosBas div img {
@@ -406,7 +405,6 @@ header {
   filter: blur(0px);
 }
 
-
 #Galery {
   padding: 10px;
   margin: 10px 0px;
@@ -414,7 +412,7 @@ header {
 }
 
 #titreGalleri {
-  color : white;
+  color: white;
 }
 
 #bodyImage {
@@ -426,15 +424,19 @@ header {
 }
 .gallery {
   --s: 150px; /* the image size */
-  
+
   display: grid;
   transform-style: preserve-3d;
   animation: r 50s linear infinite;
   position: relative;
 }
 @keyframes r {
-  0% {transform: perspective(450px) rotateX(-100deg) rotate(0deg)}
-  to {transform: perspective(450px) rotateX(-100deg) rotate(-360deg)}
+  0% {
+    transform: perspective(450px) rotateX(-100deg) rotate(0deg);
+  }
+  to {
+    transform: perspective(450px) rotateX(-100deg) rotate(-360deg);
+  }
 }
 .gallery > img {
   grid-area: 1/1;
@@ -444,20 +446,74 @@ header {
   border-radius: 10px 10px 0 0;
   transform: rotate(var(--_a)) translateY(120%) rotateX(90deg);
 }
-.gallery > img:nth-child(1) {--_a: 0deg}
-.gallery > img:nth-child(2) {--_a: 60deg}
-.gallery > img:nth-child(3) {--_a: 120deg}
-.gallery > img:nth-child(4) {--_a: 180deg}
-.gallery > img:nth-child(5) {--_a: 240deg}
-.gallery > img:nth-child(6) {--_a: 300deg}
+.gallery > img:nth-child(1) {
+  --_a: 0deg;
+}
+.gallery > img:nth-child(2) {
+  --_a: 60deg;
+}
+.gallery > img:nth-child(3) {
+  --_a: 120deg;
+}
+.gallery > img:nth-child(4) {
+  --_a: 180deg;
+}
+.gallery > img:nth-child(5) {
+  --_a: 240deg;
+}
+.gallery > img:nth-child(6) {
+  --_a: 300deg;
+}
 
 .gallery::before {
   content: "";
   position: absolute;
   inset: -100%;
-  clip-path: polygon(50% 0,calc(50% + .866*50%) 25%,calc(50% + .866*50%) 75%,50% 100%,calc(50% - .866*50%) 75%,calc(50% - .866*50%) 25%);
+  clip-path: polygon(
+    50% 0,
+    calc(50% + 0.866 * 50%) 25%,
+    calc(50% + 0.866 * 50%) 75%,
+    50% 100%,
+    calc(50% - 0.866 * 50%) 75%,
+    calc(50% - 0.866 * 50%) 25%
+  );
   background: var(--orange);
-  transform: translateZ(calc(var(--s)/2)) rotate(90deg);
+  transform: translateZ(calc(var(--s) / 2)) rotate(90deg);
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 8px;
+  padding: 50px 0px;
+  margin: 200px;
+  background-color: white;
+  border-radius: 30px;
+  filter: drop-shadow(10px 10px 10px black);
+  box-shadow: 0 0 40px var(--orange);
+}
+
+.parent div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.div7 {
+  grid-column: span 2 / span 2;
+}
+
+.repas {
+  width: auto;
+  height: 400px;
+}
+
+.repas:hover {
+  border-radius: 20px;
+  transition-duration: 0.3s;
 }
 
 footer {
@@ -576,7 +632,7 @@ footer {
   margin-top: 100px;
 }
 
-#modalContainer p{
+#modalContainer p {
   font-size: 1.3rem;
   text-align: center;
   margin-bottom: 20px;
@@ -618,14 +674,12 @@ footer {
 #modalContainer #noButton:hover {
   transform: scale(1.1);
   transition-duration: 0.3s;
-  margin: 0px 5px; 
+  margin: 0px 5px;
 }
 #modalContainer button:active {
   transform: scale(0.9);
   transition-duration: 0.3s;
 }
-
-
 
 .underline-effect {
   position: relative;
