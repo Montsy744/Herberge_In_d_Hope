@@ -1,3 +1,7 @@
+:root {
+  --orange: #c89446;
+}
+
 @media screen and (max-width: 1496px) {
   .Photos div img {
     filter: blur(0px);
@@ -36,5 +40,28 @@
 @media screen and (max-width: 1000px) {
   .baseline {
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .middle {
+    padding: 20px;
+    margin: 20px;
+    border-right: none;
+    border-left: none;
+    border-top: solid 2px grey;
+    border-bottom: solid 2px grey;
+  }
+  .middle a {
+    text-decoration: underline;
+    color: var(--orange);
+  }
+  .middle p,
+  .gauche p,
+  .gauche h3 {
+    text-align: center;
   }
 }
