@@ -1,0 +1,40 @@
+@media screen and (max-width: 1496px) {
+  .Photos div img {
+    filter: blur(0px);
+  }
+
+  .Photos div {
+    margin: 20px;
+  }
+
+  #PhotosHaut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #PhotosBas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .baseline {
+    margin-bottom: 0px;
+  }
+}

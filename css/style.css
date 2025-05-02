@@ -417,7 +417,7 @@ header {
 
 #bodyImage {
   margin: 30px;
-  min-height: 50vh;
+  min-height: 100vh;
   display: grid;
   place-content: center;
   overflow: hidden;
