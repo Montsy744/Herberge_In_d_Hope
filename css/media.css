@@ -35,6 +35,9 @@
     align-items: center;
     justify-content: center;
   }
+  #modalContainer {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -63,5 +66,17 @@
   .gauche p,
   .gauche h3 {
     text-align: center;
+  }
+
+  #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .parent {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
