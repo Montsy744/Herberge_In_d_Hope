@@ -242,6 +242,12 @@ header {
   z-index: 1;
 }
 
+.ligne {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .avecFlex {
   display: flex;
   flex-direction: row;
