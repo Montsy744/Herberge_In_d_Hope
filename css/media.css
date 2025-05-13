@@ -19,6 +19,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+ #photoChef {
+    display: none;
+  }
+}
+
+
 @media screen and (max-width: 1200px) {
   #PhotosBas {
     display: flex;
@@ -97,5 +104,20 @@
   }
   .block-img {
     border: solid 4px var(--orange);
+  }
+  .block-right .block-body {
+    margin: 0;
+  }
+  .block-right .block-img {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ligne {
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    justify-content: center;
   }
 }
