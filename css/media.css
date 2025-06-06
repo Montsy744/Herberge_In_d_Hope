@@ -149,6 +149,49 @@
 
   #contact-droit {
     border-right: none;
-  border-top: solid 2px var(--orange);
+    border-top: solid 2px var(--orange);
   }
+}
+
+@media screen and (max-width: 500px) {
+  #liens1, #liens5 {
+    display: none;
+  }
+  #liens a {
+  margin: 0px 5px;
+  font-size: 0.9rem;
+  }
+  #PhotosHaut div img {
+    width: 100%;
+    height: auto;
+  }
+  #PhotosBas div img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact {
+    align-items: center;
+  }
+  #contact-droit .contact p {
+    text-align: center;
+  }
+  #containerInfoPratique {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  #horraire {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  #contact-droit .contact p {
+    text-align: center;
+  }
+
 }
