@@ -141,3 +141,14 @@
     font-size: 1.3rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  #bodyContact {
+    flex-direction:column-reverse;
+  }
+
+  #contact-droit {
+    border-right: none;
+  border-top: solid 2px var(--orange);
+  }
+}
