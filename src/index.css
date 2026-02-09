@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary : oklch(96.2% 0.059 95.617);
+    --secondary : #242124;
+    --tertiary : #efece6;
+}

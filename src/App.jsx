@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <main>
+      <main className="min-h-screen bg-[var(--secondary)]">
         <Navbar />
       </main>
     </>
