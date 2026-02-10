@@ -1,4 +1,38 @@
+import { useGSAP } from "@gsap/react";
+import SplitText from "gsap/src/SplitText";
+import gsap from "gsap";
+
 const Hero = () => {
+
+  useGSAP(() => {
+    const titleSplit = new SplitText("#titleHero", { type: "chars" });
+
+    const parallaxTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 30%",
+        end: "bottom 80%",
+        scrub: true,
+      },
+    });
+
+    parallaxTimeline
+    .from(titleSplit.chars, {
+      opacity: 0,
+      yPercent: 100,
+      duration: 1,
+      ease: "expo.out",
+      stagger: 0.03, 
+    })
+    .from('.paraHero', {
+        opacity: 0,
+        y: 100,
+        duration: 1, 
+        ease: 'power1.inOut', 
+        stagger: 0.04,
+    }, '-=0.5')
+  });
+
   return (
     <div
       id="Hero"
@@ -11,15 +45,15 @@ const Hero = () => {
         </div>
 
         <div className="ml-2 absolute bottom-20 left-10 w-4xl">
-          <p className="title bricoFont3xl w-0.5 text-right">
+          <p className="title bricoFont3xl w-0.5 text-right paraHero">
             <span>Velekommen</span>
           </p>
-          <p className="text-white tangerineFontxl">
+          <p className="text-white tangerineFontxl" id="titleHero">
             <strong>Herberge in d'Hope</strong>
           </p>
         </div>
         <div className="absolute bottom-20 right-10">
-          <p className="text">
+          <p className="text paraHero text-2xl">
             <span>Spécialités régionales</span>
           </p>
         </div>

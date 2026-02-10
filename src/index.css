@@ -38,7 +38,7 @@
 }
 
 .text {
-    @apply text-white font-[Montserrat] text-lg font-bold ;
+    @apply text-white font-[Montserrat] font-bold ;
 }
 
 .title {
