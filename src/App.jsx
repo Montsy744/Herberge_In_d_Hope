@@ -1,11 +1,13 @@
-import Navbar from "./Components/Navbar"
+import Navbar from "./Components/section/Navbar"
+import Hero from "./Components/section/Hero"
 
 function App() {
 
   return (
     <>
-      <main className="min-h-screen bg-[var(--secondary)]">
+      <main className="min-h-screen bg-(--secondary)">
         <Navbar />
+        <Hero></Hero>
       </main>
     </>
   )

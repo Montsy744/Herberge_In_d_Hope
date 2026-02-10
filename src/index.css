@@ -1,12 +1,59 @@
 @import "tailwindcss";
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary : oklch(96.2% 0.059 95.617);
-    --secondary : #242124;
-    --tertiary : #efece6;
+  --primary: oklch(71.608% 0.14025 76.897);
+  --secondary: #000000;
+  --tertiary: #efece6;
+}
+
+@font-face {
+    font-family: "brico";
+    src: url("/public/Fonts/BricolageGrotesque-ExtraLight.ttf");
+}
+@font-face {
+    font-family: "tangerine";
+    src: url("/public/Fonts/Tangerine-Regular.ttf");
+}
+
+.noisy {
+  @apply absolute inset-0 size-full bg-[url("/img/noise.png")];
+}
+
+.Imghero {
+  @apply grid grid-cols-1 md:px-0 h-full w-full p-5 m-5 relative;
+
+  > #imgFacade {
+    @apply rounded-3xl overflow-hidden h-full w-full relative;
+  }
+
+  img {
+    @apply object-cover w-full h-full;
+  }
+
+}
+
+.text {
+    @apply text-white font-[Montserrat] text-lg font-bold ;
+}
+
+.title {
+    @apply text-(--primary) font-[Montserrat] text-lg font-bold drop-shadow-md/50;
+}
+
+
+.bricoFont {
+    @apply font-[brico];
+}
+
+.bricoFont3xl {
+    @apply font-[brico] text-3xl;
+}
+
+.tangerineFontxl {
+    @apply font-[tangerine] text-[150px];
 }

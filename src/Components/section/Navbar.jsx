@@ -1,9 +1,9 @@
-import { liensNavbar } from "../../constant/constant";
-import ButtonNavbar from "./ContactBtn";
+import { liensNavbar } from "../../../constant/constant";
+import ButtonNavbar from "./../ContactBtn";
 
 const Navbar = () => {
     return (
-        <div className="flex justify-between items-center fixed w-full">
+        <div className="z-10 flex justify-between items-center fixed w-full">
             <div id="header_img" className="w-full">
                 <img
                     src="/img/logoHerbergeindhope.png"
@@ -15,7 +15,7 @@ const Navbar = () => {
                 {liensNavbar.map((link) => {
                     return <a 
                             href={link.href}
-                            className="text-[var(--primary)] font-[Montserrat]"
+                            className="title"
                             >
                                 {link.texte}
                             </a>
