@@ -44,7 +44,7 @@ const Hero = () => {
           <img src="/img/herbergeFacade.jpg" alt="Facade du restaurant" />
         </div>
 
-        <div className="ml-2 absolute bottom-20 left-10 w-4xl">
+        <div className="ml-2 absolute bottom-20 left-10 w-5xl">
           <p className="title bricoFont3xl w-0.5 text-right paraHero">
             <span>Velekommen</span>
           </p>
@@ -53,7 +53,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="absolute bottom-20 right-10">
-          <p className="text paraHero text-2xl">
+          <p className="text paraHero text-3xl drop-shadow-md/50">
             <span>Spécialités régionales</span>
           </p>
         </div>

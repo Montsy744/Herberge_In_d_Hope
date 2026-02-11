@@ -1,9 +1,5 @@
 const liensNavbar = [
     {
-        href: "#acceuil",
-        texte: "Accueil",
-    },
-    {
         href: "#Apropos",   
         texte: "A propos",
     },

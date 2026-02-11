@@ -7,7 +7,7 @@ function App() {
     <>
       <main className="min-h-screen bg-(--secondary)">
         <Navbar />
-        <Hero></Hero>
+        <Hero />
       </main>
     </>
   )
