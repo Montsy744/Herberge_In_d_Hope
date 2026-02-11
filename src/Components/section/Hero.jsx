@@ -39,9 +39,9 @@ const Hero = () => {
       className="w-screen h-screen flex justify-center items-center"
     >
       <div className="Imghero">
-        <div className="md:col-span-3" id="imgFacade">
+        <div id="imgFacade">
           <div className="noisy" />
-          <img src="/img/herbergeFacade.jpg" alt="Facade du restaurant" />
+          <img src="/img/convivialité.jpg" alt="image de l'intérieure du restaurant" />
         </div>
 
         <div className="ml-2 absolute bottom-20 left-10 w-5xl">

@@ -11,13 +11,26 @@
   --tertiary: #efece6;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 @font-face {
-    font-family: "brico";
-    src: url("/public/Fonts/BricolageGrotesque-ExtraLight.ttf");
+  font-family: "brico";
+  src: url("/public/Fonts/BricolageGrotesque-ExtraLight.ttf");
 }
 @font-face {
-    font-family: "tangerine";
-    src: url("/public/Fonts/Tangerine-Regular.ttf");
+  font-family: "tangerine";
+  src: url("/public/Fonts/Tangerine-Regular.ttf");
+}
+
+@utility masked-img-journal {
+    mask-image: url("/img/journal.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 }
 
 .noisy {
@@ -34,26 +47,55 @@
   img {
     @apply object-cover w-full h-full;
   }
-
 }
 
+.ImgNoisy {
+  @apply relative;
+
+  > .noisyImgContaineur {
+    @apply rounded-3xl overflow-hidden w-full relative;
+  }
+
+  img {
+    @apply object-cover w-full;
+  }
+}
+
+
+
 .text {
-    @apply text-white font-[Montserrat] font-bold ;
+  @apply text-white font-[Montserrat] font-bold text-justify;
 }
 
 .title {
-    @apply text-(--primary) font-[Montserrat] text-lg font-bold drop-shadow-md/50;
+  @apply text-(--primary) font-[Montserrat] text-2xl font-bold drop-shadow-md/50 text-justify;
 }
 
-
 .bricoFont {
-    @apply font-[brico];
+  @apply font-[brico];
 }
 
 .bricoFont3xl {
-    @apply font-[brico] text-3xl;
+  @apply font-[brico] text-3xl;
 }
 
 .tangerineFontxl {
-    @apply font-[tangerine] text-[170px];
+  @apply font-[tangerine] text-[170px];
+}
+
+.tangerine {
+  @apply font-[tangerine];
+}
+
+.sectionTitle {
+  @apply flex flex-col;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--primary);
+    margin-bottom: 0.5rem;
+  }
 }
