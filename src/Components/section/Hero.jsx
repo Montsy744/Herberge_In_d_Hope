@@ -9,7 +9,7 @@ const Hero = () => {
 
     const parallaxTimeline = gsap.timeline({
       scrollTrigger: {
-        trigger: "#about",
+        trigger: "#hero",
         start: "top 30%",
         end: "bottom 80%",
         scrub: true,
@@ -35,7 +35,7 @@ const Hero = () => {
 
   return (
     <div
-      id="Hero"
+      id="hero"
       className="w-screen h-screen flex justify-center items-center"
     >
       <div className="Imghero">

@@ -10,6 +10,7 @@ function App() {
         <Navbar />
         <Hero />
         <About />
+        <div className="min-h-screen"></div>
       </main>
     </>
   )
