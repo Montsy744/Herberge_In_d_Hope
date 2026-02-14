@@ -1,30 +1,42 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  useGSAP(() => {
-    const scrollTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#apropos",
-        start: "top center",
-        end: "bottom 80%",
-        scrub: true,
-      },
-    });
-
-    scrollTimeline.from(
-      ".imgHautGaucheAPropos, .textHautDroiteAporpos, .imgDroiteBasApropos, .textBasGaucheAPropos",
-      {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-        ease: "power1.inOut",
-        stagger: 0.04,
-      },
-      "-=0.5",
-    );
+useGSAP(() => {
+  const scrollTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#apropos",
+      start: 'top 30%',
+      end: 'bottom 90%',
+      scrub: true,
+    },
   });
 
+  scrollTimeline.from(
+    ".imgHautGaucheAPropos, .textHautDroiteAporpos",
+    {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease: "power1.inOut",
+      stagger: 0.04,
+    },
+    '-=0.5'
+  )
+  .from (
+    ".imgDroiteBasApropos, .textBasGaucheAPropos", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease: "power1.inOut",
+      stagger: 0.04,
+    },
+    '-=0.5'
+  )
+});
   return (
     <div id="apropos">
       <div className="min-h-screen flex justify-center items-center">
@@ -42,7 +54,7 @@ const About = () => {
             </div>
 
             <div className="col-span-2 flex items-baseline justify-end flex-col">
-              <h2 className="text tangerine text-9xl sectionTitle">
+              <h2 className="tangerine text-9xl sectionTitle">
                 <span className="title span">Oaver ons</span> A propos de nous
               </h2>
               <p className="text textHautDroiteAporpos">
