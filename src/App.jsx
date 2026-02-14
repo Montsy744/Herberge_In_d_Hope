@@ -1,6 +1,7 @@
 import Navbar from "./Components/section/Navbar"
 import Hero from "./Components/section/Hero"
 import About from "./Components/section/About"
+import ChefWord from "./Components/section/ChefWord"
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
         <Navbar />
         <Hero />
         <About />
-        <div className="min-h-screen"></div>
+        <ChefWord />
       </main>
     </>
   )

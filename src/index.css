@@ -64,7 +64,7 @@ body {
 
 
 .text {
-  @apply text-white font-[Montserrat] font-bold text-justify;
+  @apply text-white font-[Montserrat] font-bold text-justify text-xl;
 }
 
 .title {
@@ -80,11 +80,11 @@ body {
 }
 
 .tangerineFontxl {
-  @apply font-[tangerine] text-[170px];
+  @apply font-[tangerine] text-[170px] text-white;
 }
 
 .tangerine {
-  @apply font-[tangerine];
+  @apply font-[tangerine] text-white font-bold;
 }
 
 .sectionTitle {

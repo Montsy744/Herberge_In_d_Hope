@@ -12,7 +12,6 @@ const Hero = () => {
         trigger: "#hero",
         start: "top 30%",
         end: "bottom 80%",
-        scrub: true,
       },
     });
 
@@ -48,7 +47,7 @@ const Hero = () => {
           <p className="title bricoFont3xl w-0.5 text-right paraHero">
             <span>Velekommen</span>
           </p>
-          <p className="text-white tangerineFontxl" id="titleHero">
+          <p className="tangerineFontxl" id="titleHero">
             <strong>Herberge in d'Hope</strong>
           </p>
         </div>
