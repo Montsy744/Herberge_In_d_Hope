@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { textChef } from "../../../constant/constant";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +39,7 @@ const ChefWord = () => {
                 <div className="grid grid-cols-2 gap-15">
                     <div>
                         <p className="text textChef">
-                            À l'Herberge In d'Hope, chaque plat qui sort de notre cuisine est un hommage à notre belle région et à ses saveurs d’antan. Ici, pas de chichis : juste des produits frais, des recettes qui sentent bon la tradition, et un chef qui cuisine avec le cœur. Ce que j’aime, c’est voir les sourires autour des assiettes, entendre les discussions animées, sentir les parfums qui rappellent les repas en famille. C’est ça, l’esprit de notre auberge : un lieu simple, vrai, où l’on prend le temps de bien manger et de bien vivre. Merci de faire partie de cette aventure culinaire. Prenez place, détendez-vous, et surtout… bon appétit ! 
+                            { textChef } 
                         </p>
                     </div>
                     <div>
