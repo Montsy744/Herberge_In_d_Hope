@@ -17,7 +17,14 @@ const liensNavbar = [
     },
 ];
 
+const liensImg1 = [
+    "/img/photNosServices1.jpg",
+    "/img/service.jpg",
+    "/img/photoNosServices3.jpg"
+]
+
 
 export {
     liensNavbar,
+    liensImg1,
 };
