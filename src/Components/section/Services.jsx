@@ -57,7 +57,7 @@ const Services = () => {
                         muted
                         playsInline
                         preload="auto"
-                        src="/video/output.mp4"
+                        src="/video/input.mp4"
                     />
                 </div>
             </section>
