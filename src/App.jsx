@@ -3,6 +3,7 @@ import Hero from "./Components/section/Hero"
 import About from "./Components/section/About"
 import ChefWord from "./Components/section/ChefWord"
 import ImagesGallery from "./Components/ImagesGallery"
+import Services from "./Components/section/Services"
 
 
 import { liensImg1 } from "../constant/constant"
@@ -17,6 +18,7 @@ function App() {
         <About />
         <ChefWord />
         <ImagesGallery images={ liensImg1 }/>
+        <Services />
         <div className="min-h-screen"></div>
       </main>
     </>

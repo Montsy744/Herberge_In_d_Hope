@@ -37,6 +37,14 @@ body {
   @apply absolute inset-0 size-full bg-[url("/img/noise.png")];
 }
 
+.noisyNonAbs {
+  @apply size-full relative;
+}
+
+.noisyNonAbs::before {
+  content: "";
+  @apply absolute inset-0 bg-[url("/img/noise.png")] opacity-50 pointer-events-none z-10;
+}
 .Imghero {
   @apply grid grid-cols-1 md:px-0 h-full w-full p-5 m-5 relative;
 
@@ -71,7 +79,7 @@ body {
   @apply text-(--primary) font-[Montserrat] text-2xl font-bold drop-shadow-md/50 text-justify;
 }
 
-.bricoFont {
+@utility bricoFont {
   @apply font-[brico];
 }
 
@@ -83,7 +91,7 @@ body {
   @apply font-[tangerine] text-[170px] text-white;
 }
 
-.tangerine {
+@utility tangerine {
   @apply font-[tangerine] text-white font-bold;
 }
 
@@ -97,5 +105,14 @@ body {
     height: 2px;
     background: var(--primary);
     margin-bottom: 0.5rem;
+  }
+}
+@utility video {
+  @apply w-full md:h-[80%] h-1/2 flex justify-center items-end md:object-contain object-bottom object-cover;
+}
+
+#nosService {
+  .titleService {
+    @apply md:mt-32 mt-40 text-8xl md:text-[10vw] leading-none text-center;
   }
 }
