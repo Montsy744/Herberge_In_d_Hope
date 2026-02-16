@@ -13,16 +13,23 @@ const Services = () => {
           trigger: "#nosService",
           start: "top 30%",
           end: "bottom 100%",
-          scrub: true,
+          scrub: 1,
         },
       })
       .from(heroSplit.chars, {
         yPercent: 100,
         opacity: 0,
+        duration: 2,
+        ease: "expo.out",
+        stagger: 0.4,
+      })
+      .from(".liService", {
+        yPercent: 100,
+        opacity: 0,
         duration: 1.8,
         ease: "expo.out",
-        stagger: 0.06,
-      });
+        stagger: 0.2,
+      }, '-=0.5')
   });
   return (
     <>
@@ -36,7 +43,7 @@ const Services = () => {
                 <div className="col-span-1">
                   <ul>
                     {service1.map((string) => (
-                      <div className="!my-12">
+                      <div className="!my-12 liService">
                         <span className="listService"></span>
                         <li className="text">{string}</li>
                       </div>
@@ -46,7 +53,7 @@ const Services = () => {
                 <div className="col-span-1 col-start-3">
                   <ul>
                     {service2.map((string) => (
-                      <div className="!my-12  text-right">
+                      <div className="!my-12 text-right liService">
                         <span className="listService"></span>
                         <li className="textRight">{string}</li>
                       </div>
