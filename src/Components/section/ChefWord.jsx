@@ -1,31 +1,6 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { textChef } from "../../../constant/constant";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ChefWord = () => {
-
-    useGSAP(() => {
-    const scrollTimelineChef = gsap.timeline({
-      scrollTrigger: {
-            trigger: '#chef',
-            start: 'top 80%',
-            end: 'bottom 30%',
-            scrub: true,
-        }
-    });
-
-    scrollTimelineChef
-    .from('.imgChefs, .textChef', {
-        opacity: 0,
-        y: 200,
-        duration: 1, 
-        ease: 'power1.inOut', 
-        stagger: 0.04,
-    }, '-=0.5')
-  });
 
     return (
         <div className="flex justify-center" id="#chef">

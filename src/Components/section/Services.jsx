@@ -1,12 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
-import { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
+import Snowfall from "react-snowfall";
 
 const Services = () => {
-    const videoRef = useRef();
-    const isMobile = useMediaQuery({ maxWidth: 768 });
 
     useGSAP(() => {
         const heroSplit = new SplitText(".titleService", { type: "chars, words" });
@@ -25,40 +22,15 @@ const Services = () => {
             stagger: 0.06,
         });
 
-        const startValue = isMobile ? "top 50%" : "center 60%";
-        const endValue = isMobile ? "120% top" : "bottom top";
-
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: videoRef.current,
-                start: startValue,
-                end: endValue,
-                scrub: true,
-                pin: true,
-            },
-        });
-
-        videoRef.current.onloadedmetadata = () => {
-            tl.to(videoRef.current, {
-                currentTime: videoRef.current.duration,
-            });
-        };
-    }, []);
+    });
     return (
         <>
+            
             <section id="nosService" className="relative noisyNonAbs">
+                <Snowfall color="#d49623" />
                 <div className="min-h-screen">
                     <h1 className="titleService text">NOS SERVICES</h1>
 
-                </div>
-                <div className="video absolute inset-0">
-                    <video
-                        ref={videoRef}
-                        muted
-                        playsInline
-                        preload="auto"
-                        src="/video/input.mp4"
-                    />
                 </div>
             </section>
         </>
