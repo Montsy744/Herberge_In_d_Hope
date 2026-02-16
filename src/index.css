@@ -74,6 +74,10 @@ body {
 .text {
   @apply text-white font-[Montserrat] font-bold text-justify text-xl;
 }
+*
+.textRight {
+  @apply text-white font-[Montserrat] font-bold text-right text-xl;
+}
 
 .title {
   @apply text-(--primary) font-[Montserrat] text-2xl font-bold drop-shadow-md/50 text-justify;
@@ -115,4 +119,13 @@ body {
   .titleService {
     @apply md:mt-32 mt-40 text-8xl md:text-[10vw] leading-none text-center;
   }
+}
+
+.listService::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  margin-bottom: 0.5rem;
 }
