@@ -43,7 +43,7 @@ useGSAP(() => {
     <div id="apropos">
       <div className="min-h-screen flex justify-center items-center">
         <div className="w-2/3">
-          <div className="grid grid-cols-3 gap-2 m-6">
+          <div className="grid grid-cols-3 gap-2 !my-10">
             <div className="ImgNoisy imgHautGaucheAPropos">
               <div className="noisyImgContaineur">
                 <div className="noisy" />
@@ -55,7 +55,7 @@ useGSAP(() => {
               </div>
             </div>
 
-            <div className="col-span-2 flex items-baseline justify-end flex-col">
+            <div className="col-span-2 flex items-baseline justify-end flex-col !pl-10">
               <h2 className="tangerine text-9xl sectionTitle">
                 <span className="title span">Oaver ons</span> A propos de nous
               </h2>
@@ -64,8 +64,8 @@ useGSAP(() => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-2 mt-6">
-            <div className="col-span-2 flex items-baseline justify-baseline flex-col textBasGaucheAPropos">
+          <div className="grid grid-cols-3 gap-2">
+            <div className="!pr-10 col-span-2 flex items-baseline justify-baseline flex-col textBasGaucheAPropos">
               <h2 className="title">
                 <span></span>Une ambiance conviviale pour tous !
               </h2>
