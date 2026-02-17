@@ -30,7 +30,7 @@ const ImagesGallery = ({ images }) => {
         <div className="flex justify-center items-center w-screen min-h-[66vh] h-full ImagesGallery">
             <div className="flex flex-row justify-between items-center w-[90vw] Img">
                 {images.map((src, index) => (
-                    <div className="w-130">
+                    <div  className="w-130">
                         <div className="ImgNoisy">
                             <div className="noisyImgContaineur">
                                 <div className="noisy" />

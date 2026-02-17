@@ -8,8 +8,7 @@ import Carte from "./Components/section/Carte"
 
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-
-import { liensImg1 } from "../constant/constant"
+import { liensImg1, liensImg2 } from "../constant/constant"
 
 function App() {
 
@@ -22,7 +21,6 @@ function App() {
         <ChefWord />
         <ImagesGallery images={ liensImg1 }/>
         <Services />
-        <Carte />
         <div className="min-h-screen"></div>
       </main>
       <SpeedInsights />
