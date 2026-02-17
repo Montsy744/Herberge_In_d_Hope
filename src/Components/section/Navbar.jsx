@@ -3,7 +3,7 @@ import ButtonNavbar from "./../ContactBtn";
 
 const Navbar = () => {
     return (
-        <div className="z-10 flex justify-between items-center fixed w-full h-40">
+        <div className="z-10 flex justify-between items-center fixed w-full h-40 bg-[rgba(0,0,0,0.4)]">
             <div id="header_img" className="w-1/3 flex justify-center items-center">
                 <img
                     src="/img/logoHerbergeindhope.png"

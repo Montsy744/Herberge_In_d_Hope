@@ -80,7 +80,7 @@ body {
 }
 
 .title {
-  @apply text-(--primary) font-[Montserrat] text-2xl font-bold drop-shadow-md/50 text-justify;
+  @apply text-(--primary) font-[Montserrat] text-2xl font-bold drop-shadow-md/30 text-justify;
 }
 
 @utility bricoFont {
