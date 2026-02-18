@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="Imghero">
         <div id="imgFacade">
           <div className="noisy" />
-          <img src="/img/convivialité.jpg" alt="image de l'intérieure du restaurant" />
+          <img src="/img/convivialité_Hero_Section.jpg" alt="image de l'intérieure du restaurant" />
         </div>
 
         <div className="ml-2 absolute bottom-20 left-10 w-5xl">

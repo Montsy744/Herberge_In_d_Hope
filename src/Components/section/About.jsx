@@ -49,7 +49,7 @@ useGSAP(() => {
                 <div className="noisy" />
                 <img
                   className=""
-                  src="/img/photNosServices2.jpg"
+                  src="/img/photo_terasse_about_section.jpg"
                   alt="image de la our extérieure"
                 />
               </div>
@@ -78,7 +78,7 @@ useGSAP(() => {
                 <div className="noisy" />
                 <img
                   className="h-full"
-                  src="/img/herbergeFacade.jpg"
+                  src="/img/photo_facade_about_section.jpg"
                   alt="image de la our extérieure"
                 />
               </div>

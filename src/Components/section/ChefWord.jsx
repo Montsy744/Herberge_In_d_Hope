@@ -18,7 +18,7 @@ const ChefWord = () => {
                         </p>
                     </div>
                     <div>
-                        <img className="imgChefs rounded-3xl" src="/img/lesChefs.jpeg" alt="photo des chefs" />
+                        <img className="imgChefs rounded-3xl" src="/img/photo_chefs_mot_des_chefs_section.jpeg" alt="photo des chefs" />
                     </div>
                     
                 </div>
