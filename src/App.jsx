@@ -5,6 +5,7 @@ import ChefWord from "./Components/section/ChefWord"
 import ImagesGallery from "./Components/ImagesGallery"
 import Services from "./Components/section/Services"
 import Carte from "./Components/section/Carte"
+import Info from "./Components/section/Info"
 
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
@@ -21,6 +22,7 @@ function App() {
         <ChefWord />
         <ImagesGallery images={ liensImg1 }/>
         <Services />
+        <Info />
         <div className="min-h-screen"></div>
       </main>
       <SpeedInsights />
