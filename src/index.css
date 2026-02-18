@@ -72,11 +72,11 @@ body {
 
 
 .text {
-  @apply text-white font-[Montserrat] font-bold text-justify text-xl;
+  @apply text-white font-[Montserrat] text-justify text-xl;
 }
 *
 .textRight {
-  @apply text-white font-[Montserrat] font-bold text-right text-xl;
+  @apply text-white font-[Montserrat] text-right text-xl;
 }
 
 .title {
@@ -111,6 +111,7 @@ body {
     margin-bottom: 0.5rem;
   }
 }
+
 @utility video {
   @apply w-full md:h-[80%] h-1/2 flex justify-center items-end md:object-contain object-bottom object-cover;
 }

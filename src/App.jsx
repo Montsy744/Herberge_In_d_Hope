@@ -9,7 +9,7 @@ import Info from "./Components/section/Info"
 
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-import { liensImg1, liensImg2 } from "../constant/constant"
+import { liensImg1 } from "../constant/constant"
 
 function App() {
 

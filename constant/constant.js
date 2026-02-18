@@ -47,14 +47,45 @@ const service2 = [
 
 const service3 = "Événements privés: Baptême, anniversaire, communion"
 
+const horraireShowroom = [
+    {
+        jour: "Lundi",
+        horraire: "09:00 – 17:00",
+    },
+    {
+        jour: "Mardi",
+        horraire: "fermé",
+    },
+    {
+        jour: "Mercredi",
+        horraire: "fermé",
+    },
+    {
+        jour: "Jeudi",
+        horraire: "09:00 – 17:00",
+    },
+    {
+        jour: "Vendredi",
+        horraire: "09:00 – 17:00",
+    },
+    {
+        jour: "Samedi",
+        horraire: "09:00 – 17:00",
+    },
+    {
+        jour: "Dimanche",
+        horraire: "09:00 – 17:00",
+    }
+]
+
 export {
     liensNavbar,
     liensImg1,
-    liensImg2,
     textApropos,
     textAmnbianceConv,
     textChef,
     service1,
     service2,
     service3,
+    horraireShowroom,
 };
