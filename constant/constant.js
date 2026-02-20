@@ -33,7 +33,7 @@ const service1 = [
     "Service traiteur",
     "Séminaires d'entreprises",
     "Réceptions de mariage",
-    "Trois salles de réception modulable, possibilité d'accueillir entre 15 et 250 personnes",
+    "Trois salles de réception modulables, possibilité d'accueillir entre 15 et 250 personnes",
     "Accessible aux personnes à mobilité réduite",
 ]
 
@@ -45,7 +45,7 @@ const service2 = [
     "Wi-Fi gratuit",
 ]
 
-const service3 = "Événements privés: Baptême, anniversaire, communion"
+const service3 = "Événements privés : Baptême, anniversaire, communion"
 
 const horraireShowroom = [
     {
@@ -54,11 +54,11 @@ const horraireShowroom = [
     },
     {
         jour: "Mardi",
-        horraire: "fermé",
+        horraire: "Fermé",
     },
     {
         jour: "Mercredi",
-        horraire: "fermé",
+        horraire: "Fermé",
     },
     {
         jour: "Jeudi",
@@ -76,7 +76,26 @@ const horraireShowroom = [
         jour: "Dimanche",
         horraire: "09:00 – 17:00",
     }
-]
+];
+
+const ImgGallerieDessert = [
+    "/img/photoDessertGallery1.jpg",
+    "/img/photoDessertGallery2.jpg",
+    "/img/photoDessertGallery3.jpg",
+    "/img/photoDessertGallery4.jpg",
+    "/img/photoDessertGallery5.jpg",
+    "/img/photoDessertGallery6.jpg",
+];
+
+const ImgGalleriePlat = [
+    "/img/repas1.jpg",
+    "/img/repas2.jpg",
+    "/img/repas3.jpg",
+    "/img/repas4.jpg",
+    "/img/repas5.jpg",
+    "/img/repas6.jpg",
+    "/img/repas7.jpg",
+];
 
 export {
     liensNavbar,
@@ -88,4 +107,6 @@ export {
     service2,
     service3,
     horraireShowroom,
+    ImgGalleriePlat,
+    ImgGallerieDessert,
 };
