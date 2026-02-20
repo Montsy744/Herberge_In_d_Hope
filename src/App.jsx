@@ -7,8 +7,6 @@ import Services from "./Components/section/Services"
 import Carte from "./Components/section/Carte"
 import Info from "./Components/section/Info"
 
-import { SpeedInsights } from '@vercel/speed-insights/react';
-
 import { liensImg1 } from "../constant/constant"
 
 function App() {
@@ -25,7 +23,6 @@ function App() {
         <Info />
         <div className="min-h-screen"></div>
       </main>
-      <SpeedInsights />
     </>
   )
 }

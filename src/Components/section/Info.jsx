@@ -3,7 +3,7 @@ import Showroom from "./Showroom";
 const Info = () => {
   return (
     <div
-      id="#infoPratique"
+      id="infoPratique"
       className="flex flex-col justify-center items-center"
     >
       <div className="flex justify-center items-center !m-30">

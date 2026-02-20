@@ -45,7 +45,7 @@ const Services = () => {
                     {service1.map((string) => (
                       <div className="!my-12 liService">
                         <span className="listService"></span>
-                        <li className="text">{string}</li>
+                        <li className="textLeft">{string}</li>
                       </div>
                     ))}
                   </ul>
