@@ -4,7 +4,7 @@ const Info = () => {
   return (
     <div
       id="infoPratique"
-      className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-center !mb-15"
     >
       <div className="flex justify-center items-center !m-30">
         <h2 className="tangerine text-9xl sectionTitle">

@@ -126,6 +126,12 @@ body {
   }
 }
 
+#Galery {
+  .titleGalerie {
+    @apply md:mt-32 mt-40 text-8xl md:text-[10vw] leading-none text-center;
+  }
+}
+
 .listService::before {
   content: "";
   display: inline-block;

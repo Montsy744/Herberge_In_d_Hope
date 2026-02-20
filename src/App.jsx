@@ -6,6 +6,7 @@ import ImagesGallery from "./Components/ImagesGallery"
 import Services from "./Components/section/Services"
 import Carte from "./Components/section/Carte"
 import Info from "./Components/section/Info"
+import GalleryPhoto from "./Components/section/GalleryPhoto"
 
 import { liensImg1 } from "../constant/constant"
 
@@ -21,6 +22,7 @@ function App() {
         <ImagesGallery images={ liensImg1 }/>
         <Services />
         <Info />
+        <GalleryPhoto />
         <div className="min-h-screen"></div>
       </main>
     </>
