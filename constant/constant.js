@@ -91,10 +91,12 @@ const ImgGalleriePlat = [
     "/img/repas1.jpg",
     "/img/repas2.jpg",
     "/img/repas3.jpg",
-    "/img/repas4.jpg",
-    "/img/repas5.jpg",
-    "/img/repas6.jpg",
-    "/img/repas7.jpg",
+];
+
+const ImgGallerieEntrees = [
+    "/img/entree1.jpg",
+    "/img/entree2.jpg",
+    "/img/entree3.jpg",
 ];
 
 export {
@@ -107,6 +109,7 @@ export {
     service2,
     service3,
     horraireShowroom,
+    ImgGallerieEntrees,
     ImgGalleriePlat,
     ImgGallerieDessert,
 };
