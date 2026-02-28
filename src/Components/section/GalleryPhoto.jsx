@@ -8,7 +8,7 @@ const GalleryPhoto = () => {
             <Snowfall color="#d49623" />
             <div className="flex flex-col justify-center items-center">
                 <h1 className="titleGalerie text">NOTRE GALERIE</h1>
-                <div className="flex justify-around w-2/3">
+                <div className="flex justify-around w-2/3 !mt-15 !mb-8">
                     <ButtonGallery 
                     text={"Les entrées"}
                     onClick={() => document.getElementById("Galery-entrees").scrollIntoView({ behavior: "smooth" })}
