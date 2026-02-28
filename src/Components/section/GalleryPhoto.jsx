@@ -7,7 +7,13 @@ const GalleryPhoto = () => {
             <Snowfall color="#d49623" />
             <div className="flex flex-col justify-center items-center">
                 <h1 className="titleGalerie text">NOTRE GALERIE</h1>
-                <div id="plat" className="!mt-10 flex flex-col justify-center items-center">
+                <div className="flex justify-aroundt w-2/3">
+                    <a href="#Galery/entrees">Les entrées</a>
+                    <a href="#Galery/plat">Les plats</a>
+                    <a href="#Galery/dessert">les desserts</a>
+                </div>
+
+                <div id="Galery/entrees" className="!mt-10 flex flex-col justify-center items-center">
                     <h2 className="tangerine text-8xl sectionTitle">
                         <span className="title span">poteeten</span> Les entrées
                     </h2>
@@ -17,7 +23,7 @@ const GalleryPhoto = () => {
                         ))}
                     </div>
                 </div>
-                <div id="plat" className="!mt-10 flex flex-col justify-center items-center">
+                <div id="Galery/plat" className="!mt-10 flex flex-col justify-center items-center">
                     <h2 className="tangerine text-8xl sectionTitle">
                         <span className="title span">poteeten</span>Les plats
                     </h2>
@@ -27,7 +33,7 @@ const GalleryPhoto = () => {
                         ))}
                     </div>
                 </div>
-                <div id="plat" className="!mt-10 flex flex-col justify-center items-center">
+                <div id="Galery/dessert" className="!mt-10 flex flex-col justify-center items-center">
                     <h2 className="tangerine text-8xl sectionTitle">
                         <span className="title span">poteeten</span>Les desserts
                     </h2>
