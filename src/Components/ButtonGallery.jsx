@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ButtonGallery = ({ text }) => {
+const ButtonGallery = ({ text, onClick }) => {
   return (
     <StyledWrapper text={text}>
-      <button className="Btn">
+      <button className="Btn" onClick={ onClick }>
       </button>
     </StyledWrapper>
   );

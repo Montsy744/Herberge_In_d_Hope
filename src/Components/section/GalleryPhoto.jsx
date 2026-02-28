@@ -9,12 +9,21 @@ const GalleryPhoto = () => {
             <div className="flex flex-col justify-center items-center">
                 <h1 className="titleGalerie text">NOTRE GALERIE</h1>
                 <div className="flex justify-around w-2/3">
-                    <ButtonGallery text={"Les entrées"}></ButtonGallery>
-                    <ButtonGallery text={"Les plats"}></ButtonGallery>
-                    <ButtonGallery text={"Les desserts"}></ButtonGallery>
+                    <ButtonGallery 
+                    text={"Les entrées"}
+                    onClick={() => document.getElementById("Galery-entrees").scrollIntoView({ behavior: "smooth" })}
+                    ></ButtonGallery>
+                    <ButtonGallery 
+                    text={"Les plats"}
+                    onClick={() => document.getElementById("Galery-plat").scrollIntoView({ behavior: "smooth" })}
+                    ></ButtonGallery>
+                    <ButtonGallery 
+                    text={"Les desserts"}
+                    onClick={() => document.getElementById("Galery-dessert").scrollIntoView({ behavior: "smooth" })}
+                    ></ButtonGallery>
                 </div>
 
-                <div id="Galery/entrees" className="!mt-10 flex flex-col justify-center items-center">
+                <div id="Galery-entrees" className="!mt-10 flex flex-col justify-center items-center">
                     <h2 className="tangerine text-8xl sectionTitle">
                         <span className="title span">poteeten</span> Les entrées
                     </h2>
@@ -24,7 +33,7 @@ const GalleryPhoto = () => {
                         ))}
                     </div>
                 </div>
-                <div id="Galery/plat" className="!mt-10 flex flex-col justify-center items-center">
+                <div id="Galery-plat" className="!mt-10 flex flex-col justify-center items-center">
                     <h2 className="tangerine text-8xl sectionTitle">
                         <span className="title span">poteeten</span>Les plats
                     </h2>
@@ -34,7 +43,7 @@ const GalleryPhoto = () => {
                         ))}
                     </div>
                 </div>
-                <div id="Galery/dessert" className="!mt-10 flex flex-col justify-center items-center">
+                <div id="Galery-dessert" className="!mt-10 flex flex-col justify-center items-center">
                     <h2 className="tangerine text-8xl sectionTitle">
                         <span className="title span">poteeten</span>Les desserts
                     </h2>
