@@ -1,4 +1,5 @@
 import Snowfall from "react-snowfall";
+import ButtonGallery from "../ButtonGallery";
 import { ImgGallerieDessert, ImgGallerieEntrees, ImgGalleriePlat } from "../../../constant/constant";
 
 const GalleryPhoto = () => {
@@ -7,10 +8,10 @@ const GalleryPhoto = () => {
             <Snowfall color="#d49623" />
             <div className="flex flex-col justify-center items-center">
                 <h1 className="titleGalerie text">NOTRE GALERIE</h1>
-                <div className="flex justify-aroundt w-2/3">
-                    <a href="#Galery/entrees">Les entrées</a>
-                    <a href="#Galery/plat">Les plats</a>
-                    <a href="#Galery/dessert">les desserts</a>
+                <div className="flex justify-around w-2/3">
+                    <ButtonGallery text={"Les entrées"}></ButtonGallery>
+                    <ButtonGallery text={"Les plats"}></ButtonGallery>
+                    <ButtonGallery text={"Les desserts"}></ButtonGallery>
                 </div>
 
                 <div id="Galery/entrees" className="!mt-10 flex flex-col justify-center items-center">

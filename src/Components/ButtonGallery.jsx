@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const ButtonGallery = ({ text }) => {
   return (
-    <StyledWrapper>
+    <StyledWrapper text={text}>
       <button className="Btn">
       </button>
     </StyledWrapper>
@@ -19,7 +19,7 @@ const StyledWrapper = styled.div`
     background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
     background-size: 250%;
     background-position: left;
-    color: #ffd277;
+    color: white;
     position: relative;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
 
   .Btn::before {
     position: absolute;
-    content: "SUBSCRIBE";
+    content: "${({ text }) => text}";
     color: #ffd277;
     display: flex;
     align-items: center;
@@ -58,4 +58,4 @@ const StyledWrapper = styled.div`
     transform: scale(0.95);
   }`;
 
-export default Button;
+export default ButtonGallery;
