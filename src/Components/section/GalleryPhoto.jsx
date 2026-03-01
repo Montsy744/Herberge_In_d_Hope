@@ -1,8 +1,32 @@
 import Snowfall from "react-snowfall";
 import ButtonGallery from "../ButtonGallery";
 import { ImgGallerieDessert, ImgGallerieEntrees, ImgGalleriePlat } from "../../../constant/constant";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitText from "gsap/SplitText.js";
 
 const GalleryPhoto = () => {
+    useGSAP(() => {
+
+        const titleGaleriSplit = new SplitText(".titleGalerie", { type: "chars, words" });
+        gsap
+        .timeline({
+            scrollTrigger: {
+            trigger: "#Galery",
+            start: "top 30%",
+            end: "top top",
+            scrub: 1,
+            },
+        })
+        .from(titleGaleriSplit.chars, {
+            yPercent: 100,
+            opacity: 0,
+            duration: 2,
+            ease: "expo.out",
+            stagger: 0.4,
+        })
+    })
+
     return (
         <section id="Galery" className="relative noisyNonAbs w-screen min-h-screen">
             <Snowfall color="#d49623" />
