@@ -5,6 +5,15 @@ const Contact = () => {
                 <h2 className="tangerine text-9xl sectionTitle">
                     <span className="title span">Ons kontakteren</span> Nous contacter
                 </h2>
+
+                <div>
+                    <div>
+                        
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
             </div>
         </div>
     )
