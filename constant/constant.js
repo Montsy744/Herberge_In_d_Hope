@@ -99,6 +99,10 @@ const ImgGallerieEntrees = [
     "/img/entree3.jpg",
 ];
 
+const GoogleMapsImg = "/img/capturegooglemaps.png"
+
+const GoogleMapsLink = "https://www.google.com/maps/place/Herberge+In+d'Hope+reception/@50.840559,2.2965918,17z/data=!3m1!4b1!4m6!3m5!1s0x47dcf7759a9c8033:0x41f85c7381396944!8m2!3d50.8405556!4d2.2991667!16s%2Fg%2F1tm1pr5l?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+
 export {
     liensNavbar,
     liensImg1,
@@ -112,4 +116,6 @@ export {
     ImgGallerieEntrees,
     ImgGalleriePlat,
     ImgGallerieDessert,
+    GoogleMapsImg,
+    GoogleMapsLink
 };

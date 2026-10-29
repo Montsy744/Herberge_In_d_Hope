@@ -9,6 +9,10 @@
   --primary: oklch(71.608% 0.14025 76.897);
   --secondary: #000000;
   --tertiary: #efece6;
+
+  --sun-glow-color: var(--primary, oklch(71.608% 0.14025 76.897));
+  --sun-glow-core: oklch(85% 0.18 76.897); /* Variante plus brillante pour le cœur du soleil */
+  --sun-transparent: transparent;
 }
 
 html,
