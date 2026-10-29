@@ -1,22 +1,68 @@
+const contactStyles = `
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 3.75rem !important;
+  }
+
+  .contact-wrapper {
+    width: 66.666667%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-heading {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  @media (max-width: 1440px) {
+    .contact-wrapper {
+      width: 80%;
+    }
+
+    .contact-heading {
+      font-size: 6rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .contact-wrapper {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-heading {
+      font-size: 4.5rem;
+    }
+  }
+`;
+
 const Contact = () => {
     return (
-        <div id="Contact" className="flex justify-center min-h-screen !mt-15">
-            <div className="w-2/3 flex justify-center">
-                <h2 className="tangerine text-9xl sectionTitle">
-                    <span className="title span">Ons kontakteren</span> Nous contacter
-                </h2>
+        <>
+            <style>{contactStyles}</style>
 
-                <div>
-                    <div>
-                        
-                    </div>
-                    <div>
+            <div id="Contact" className="contact-container">
+                <div className="contact-wrapper">
+                    <h2 className="tangerine contact-heading sectionTitle">
+                        <span className="title span">Ons kontakteren</span> Nous contacter
+                    </h2>
 
+                    <div>
+                        <div>
+                            
+                        </div>
+                        <div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+        </>
+    );
+};
 
-export default Contact
+export default Contact;

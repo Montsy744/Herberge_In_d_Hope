@@ -6,87 +6,176 @@ import { textAmnbianceConv, textApropos } from "../../../constant/constant";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const aboutStyles = `
+  .about-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0;
+  }
+
+  .about-wrapper {
+    width: 66.666667%;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .about-grid-top {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  .about-col-2 {
+    grid-column: span 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-top-right {
+    justify-content: flex-end;
+    padding-left: 2.5rem !important;
+  }
+
+  .about-bottom-left {
+    justify-content: flex-start;
+    padding-right: 2.5rem !important;
+  }
+
+  .about-heading-tangerine {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .about-img-full-height {
+    height: 100%;
+  }
+
+  @media (max-width: 1440px) {
+    .about-wrapper {
+      width: 80%;
+    }
+
+    .about-heading-tangerine {
+      font-size: 6rem; 
+    }
+
+    .about-top-right {
+      padding-left: 1.5rem !important;
+    }
+
+    .about-bottom-left {
+      padding-right: 1.5rem !important;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .about-wrapper {
+      width: 90%;
+    }
+
+    .about-heading-tangerine {
+      font-size: 4.5rem;
+    }
+
+    .about-grid {
+      gap: 1rem;
+    }
+  }
+`;
+
 const About = () => {
-useGSAP(() => {
-  const scrollTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#apropos",
-      start: 'top 30%',
-      end: 'bottom 90%',
-      scrub: true,
-    },
+  useGSAP(() => {
+    const scrollTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#apropos",
+        start: 'top 30%',
+        end: 'bottom 90%',
+        scrub: true,
+      },
+    });
+
+    scrollTimeline.from(
+      ".imgHautGaucheAPropos, .textHautDroiteAporpos",
+      {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power1.inOut",
+        stagger: 0.04,
+      },
+      '-=0.5'
+    )
+    .from(
+      ".imgDroiteBasApropos, .textBasGaucheAPropos", {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power1.inOut",
+        stagger: 0.04,
+      },
+      '-=0.5'
+    )
   });
 
-  scrollTimeline.from(
-    ".imgHautGaucheAPropos, .textHautDroiteAporpos",
-    {
-      opacity: 0,
-      y: 100,
-      duration: 1,
-      ease: "power1.inOut",
-      stagger: 0.04,
-    },
-    '-=0.5'
-  )
-  .from (
-    ".imgDroiteBasApropos, .textBasGaucheAPropos", {
-      opacity: 0,
-      y: 100,
-      duration: 1,
-      ease: "power1.inOut",
-      stagger: 0.04,
-    },
-    '-=0.5'
-  )
-});
   return (
-    <div id="apropos">
-      <div className="min-h-screen flex justify-center items-center">
-        <div className="w-2/3">
-          <div className="grid grid-cols-3 gap-2 !my-10">
-            <div className="ImgNoisy imgHautGaucheAPropos">
-              <div className="noisyImgContaineur">
-                <div className="noisy" />
-                <img
-                  className=""
-                  src="/img/photo_terasse_about_section.jpg"
-                  alt="image de la our extérieure"
-                />
+    <>
+      <style>{aboutStyles}</style>
+
+      <div id="apropos">
+        <div className="about-screen">
+          <div className="about-wrapper">
+            <div className="about-grid about-grid-top">
+              <div className="ImgNoisy imgHautGaucheAPropos">
+                <div className="noisyImgContaineur">
+                  <div className="noisy" />
+                  <img
+                    src="/img/photo_terasse_about_section.jpg"
+                    alt="image de la cour extérieure"
+                  />
+                </div>
+              </div>
+
+              <div className="about-col-2 about-top-right">
+                <h2 className="tangerine about-heading-tangerine sectionTitle">
+                  <span className="title span">Oaver ons</span> A propos de nous
+                </h2>
+                <p className="text textHautDroiteAporpos">
+                  { textApropos }
+                </p>
               </div>
             </div>
 
-            <div className="col-span-2 flex items-baseline justify-end flex-col !pl-10">
-              <h2 className="tangerine text-9xl sectionTitle">
-                <span className="title span">Oaver ons</span> A propos de nous
-              </h2>
-              <p className="text textHautDroiteAporpos">
-                { textApropos }
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            <div className="!pr-10 col-span-2 flex items-baseline justify-baseline flex-col textBasGaucheAPropos">
-              <h2 className="title">
-                <span></span>Une ambiance conviviale pour tous !
-              </h2>
-              <p className="text">
-                { textAmnbianceConv }
-              </p>
-            </div>
-            <div className=" ImgNoisy imgDroiteBasApropos">
-              <div className="noisyImgContaineur h-full">
-                <div className="noisy" />
-                <img
-                  className="h-full"
-                  src="/img/photo_facade_about_section.jpg"
-                  alt="image de la our extérieure"
-                />
+            <div className="about-grid">
+              <div className="about-col-2 about-bottom-left textBasGaucheAPropos">
+                <h2 className="title">
+                  <span></span>Une ambiance conviviale pour tous !
+                </h2>
+                <p className="text">
+                  { textAmnbianceConv }
+                </p>
+              </div>
+
+              <div className="ImgNoisy imgDroiteBasApropos">
+                <div className="noisyImgContaineur about-img-full-height">
+                  <div className="noisy" />
+                  <img
+                    className="about-img-full-height"
+                    src="/img/photo_facade_about_section.jpg"
+                    alt="image de la cour extérieure"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

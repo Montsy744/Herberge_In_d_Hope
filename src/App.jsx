@@ -11,11 +11,19 @@ import Contact from "./Components/section/Contact"
 
 import { liensImg1 } from "../constant/constant"
 
-function App() {
+const appStyles = `
+  .app-main {
+    min-height: 100vh;
+    background-color: var(--secondary);
+  }
+`;
 
+function App() {
   return (
     <>
-      <main className="min-h-screen bg-(--secondary)">
+      <style>{appStyles}</style>
+
+      <main className="app-main">
         <Navbar />
         <Hero />
         <About />
