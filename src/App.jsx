@@ -12,7 +12,8 @@ import Info from "./Components/section/Info";
 import GalleryPhoto from "./Components/section/GalleryPhoto";
 import Contact from "./Components/section/Contact";
 import Footer from "./Components/section/Footer";
-import LegalNotice from "./Components/cnil/LegalNotice"; // Ajuste le chemin si besoin
+import LegalNotice from "./Components/cnil/LegalNotice";
+import PrivacyPolicy from "./Components/cnil/PrivacyPolicy";
 
 import { liensImg1 } from "../constant/constant";
 
@@ -58,6 +59,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
+          <Route path="/confidentialite" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </main>

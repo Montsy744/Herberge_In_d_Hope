@@ -27,8 +27,7 @@ const Footer = () => {
         font-size: 2rem;
     }
     .left-text h2,
-    .right p, 
-    .footer-link{
+    .right p {
         color: var(--tertiary);
         font-size: 1.4rem;
     }
@@ -47,11 +46,28 @@ const Footer = () => {
 
     .footer-container-bottom {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
-        gap: 3rem;
+        gap: 1rem;
         width: 100%;
-        padding: 2rem 0 
+        padding: 2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-link {
+        color: var(--tertiary);
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+        color: var(--primary);
+        text-decoration: underline;
+    }
+
+    .footer-separator {
+        color: var(--primary);
     }
     `
 
@@ -83,13 +99,9 @@ const Footer = () => {
                     <Link to="/mentions-legales" className="footer-link bricoFont">
                         Mentions Légales
                     </Link>
-
-                    <Link to="/mentions-legales" className="footer-link bricoFont">
-                        Mentions Légales
-                    </Link>
-
-                    <Link to="/mentions-legales" className="footer-link bricoFont">
-                        Mentions Légales
+                    <span className="footer-separator">|</span>
+                    <Link to="/confidentialite" className="footer-link bricoFont">
+                        Politique de Confidentialité
                     </Link>
                 </div>
             </div>
