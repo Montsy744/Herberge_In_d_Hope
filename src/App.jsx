@@ -8,6 +8,7 @@ import Carte from "./Components/section/Carte"
 import Info from "./Components/section/Info"
 import GalleryPhoto from "./Components/section/GalleryPhoto"
 import Contact from "./Components/section/Contact"
+import Footer from "./Components/section/Footer"
 
 import { liensImg1 } from "../constant/constant"
 
@@ -33,6 +34,7 @@ function App() {
         <Info />
         <GalleryPhoto />
         <Contact />
+        <Footer />
       </main>
     </>
   )
