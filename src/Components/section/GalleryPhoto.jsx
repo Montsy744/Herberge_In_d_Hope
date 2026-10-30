@@ -136,7 +136,7 @@ const GalleryPhoto = () => {
 
                     <div id="Galery-entrees" className="gallery-category">
                         <h2 className="tangerine gallery-heading sectionTitle">
-                            <span className="title span">poteeten</span> Les entrées
+                           Les entrées
                         </h2>
                         <div className="gallery-grid">
                             {ImgGallerieEntrees.map((img, key) => (
@@ -146,7 +146,7 @@ const GalleryPhoto = () => {
                     </div>
                     <div id="Galery-plat" className="gallery-category">
                         <h2 className="tangerine gallery-heading sectionTitle">
-                            <span className="title span">poteeten</span>Les plats
+                            Les plats
                         </h2>
                         <div className="gallery-grid">
                             {ImgGalleriePlat.map((img, key) => (
@@ -156,7 +156,7 @@ const GalleryPhoto = () => {
                     </div>
                     <div id="Galery-dessert" className="gallery-category">
                         <h2 className="tangerine gallery-heading sectionTitle">
-                            <span className="title span">poteeten</span>Les desserts
+                            Les desserts
                         </h2>
                         <div className="gallery-grid">
                             {ImgGallerieDessert.map((img, key) => (
