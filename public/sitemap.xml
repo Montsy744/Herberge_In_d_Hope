@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://herberge-in-d-hope.vercel.app/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://herberge-in-d-hope.vercel.app/mentions-legales</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://herberge-in-d-hope.vercel.app/confidentialite</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://herberge-in-d-hope.vercel.app/cgu</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>

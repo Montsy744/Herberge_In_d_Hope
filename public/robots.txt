@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://herberge-in-d-hope.vercel.app/sitemap.xml
