@@ -40,10 +40,10 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
-      <ChefWord />
       <ImagesGallery images={liensImg1} />
       <Services />
       <Info />
+      <ChefWord />
       <GalleryPhoto />
       <Contact />
     </>

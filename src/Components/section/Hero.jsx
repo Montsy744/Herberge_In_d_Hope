@@ -4,38 +4,60 @@ import gsap from "gsap";
 
 const heroStyles = `
   .hero-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .Imghero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: calc(var(--spacing) * 5);
+  }
+
+  #imgFacade {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  #imgFacade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .hero-content-left {
     position: absolute;
-    bottom: 5rem; 
-    left: 2.5rem; 
-    max-width: 64rem; 
-    margin-left: 0.5rem;
+    bottom: 5rem;
+    left: 2.5rem;
+    max-width: 64rem;
+    z-index: 2;
   }
 
   .hero-subtitle {
-    width: min-content;
-    text-align: right;
+    width: fit-content;
+    text-align: left;
   }
 
   .hero-content-right {
     position: absolute;
     bottom: 5rem;
     right: 2.5rem;
+    z-index: 2;
   }
 
   .hero-tagline {
-    font-size: 1.875rem; 
+    font-size: 1.875rem;
     line-height: 2.25rem;
     filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.5));
   }
-
 
   @media (max-width: 1440px) {
     .hero-content-left {
@@ -75,6 +97,67 @@ const heroStyles = `
 
     .hero-tagline {
       font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .Imghero {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-content-left {
+      top: 50%;
+      bottom: auto;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      background-color: var(--secondary);
+    }
+
+    .hero-subtitle {
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero-content-left .tangerineFontxl {
+      font-size: 56px;
+      line-height: 1.1;
+    }
+
+    .hero-content-right {
+      bottom: 2.5rem;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-content-left .tangerineFontxl {
+      font-size: 44px;
+    }
+
+    .hero-content-right {
+      bottom: 2rem;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
     }
   }
 `;
