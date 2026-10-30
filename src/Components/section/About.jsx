@@ -87,40 +87,105 @@ const aboutStyles = `
       gap: 1rem;
     }
   }
+
+  @media (max-width: 768px) {
+    .about-screen {
+      padding: 4rem 0;
+    }
+
+    .about-wrapper {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-direction: column;
+      margin: 0 !important;
+      gap: 1.5rem;
+    }
+
+    .about-col-2 {
+      display: contents;
+    }
+
+    .about-heading-tangerine {
+      font-size: 3.5rem;
+      text-align: center;
+      width: 100%;
+      order: 1;
+    }
+
+    .imgHautGaucheAPropos {
+      order: 2;
+    }
+
+  
+    .textHautDroiteAporpos {
+      order: 3;
+    }
+
+    .imgDroiteBasApropos {
+      order: 4;
+    }
+
+    .about-bottom-left {
+      order: 5;
+    }
+
+    .noisyImgContaineur img,
+    .about-img-full-height {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-heading-tangerine {
+      font-size: 2.8rem;
+    }
+  }
 `;
 
 const About = () => {
   useGSAP(() => {
-    const scrollTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#apropos",
-        start: 'top 30%',
-        end: 'bottom 90%',
-        scrub: true,
-      },
-    });
+    const mm = gsap.matchMedia();
 
-    scrollTimeline.from(
-      ".imgHautGaucheAPropos, .textHautDroiteAporpos",
-      {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-        ease: "power1.inOut",
-        stagger: 0.04,
-      },
-      '-=0.5'
-    )
-    .from(
-      ".imgDroiteBasApropos, .textBasGaucheAPropos", {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-        ease: "power1.inOut",
-        stagger: 0.04,
-      },
-      '-=0.5'
-    )
+    mm.add("(min-width: 769px)", () => {
+      const scrollTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#apropos",
+          start: 'top 30%',
+          end: 'bottom 90%',
+          scrub: true,
+        },
+      });
+
+      scrollTimeline.from(
+        ".imgHautGaucheAPropos, .textHautDroiteAporpos",
+        {
+          opacity: 0,
+          y: 100,
+          duration: 1,
+          ease: "power1.inOut",
+          stagger: 0.04,
+        },
+        '-=0.5'
+      )
+      .from(
+        ".imgDroiteBasApropos, .textBasGaucheAPropos", {
+          opacity: 0,
+          y: 100,
+          duration: 1,
+          ease: "power1.inOut",
+          stagger: 0.04,
+        },
+        '-=0.5'
+      );
+    });
   });
 
   return (
