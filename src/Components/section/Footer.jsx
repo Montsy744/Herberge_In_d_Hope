@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     const footerStyle = `
     
@@ -11,6 +13,7 @@ const Footer = () => {
         align-items: center;
         gap: 3rem;
         width: 100%;
+        padding: 1rem 0 
     }
 
     .left {
@@ -24,18 +27,31 @@ const Footer = () => {
         font-size: 2rem;
     }
     .left-text h2,
-    .right p {
+    .right p, 
+    .footer-link{
         color: var(--tertiary);
         font-size: 1.4rem;
     }
-    
+
     .center {
-        border-left: solid 1px var(--primary)    
-        border-rigth: solid 1px var(--primary)
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .center-img {
+    
         width: 10rem;
+
+    }
+
+    .footer-container-bottom {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
+        padding: 2rem 0 
     }
     `
 
@@ -62,6 +78,19 @@ const Footer = () => {
                     <div className="right">
                         <p>© 2025 Herberge In d'Hope. Tous droits réservés.</p>
                     </div>
+                </div>
+                <div className="footer-container-bottom">
+                    <Link to="/mentions-legales" className="footer-link bricoFont">
+                        Mentions Légales
+                    </Link>
+
+                    <Link to="/mentions-legales" className="footer-link bricoFont">
+                        Mentions Légales
+                    </Link>
+
+                    <Link to="/mentions-legales" className="footer-link bricoFont">
+                        Mentions Légales
+                    </Link>
                 </div>
             </div>
         </>

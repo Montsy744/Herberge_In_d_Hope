@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
+import ButtonHome from "./common/ButtonHome";
 
 const legalNoticeStyles = `
-  /* === Conteneur Principal === */
   .legal-container {
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@ const legalNoticeStyles = `
   }
 
   .legal-wrapper {
-    width: 66.666667%; /* w-2/3 */
+    width: 66.666667%;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -35,7 +35,11 @@ const legalNoticeStyles = `
     line-height: 1;
   }
 
-  /* === Blocs de contenu === */
+  .legal-title-fr {
+    white-space: nowrap;
+    display: inline-block;
+  }
+
   .legal-section {
     display: flex;
     flex-direction: column;
@@ -65,7 +69,6 @@ const legalNoticeStyles = `
     opacity: 0.8;
   }
 
-  /* === Responsive : Ordinateurs Portables (max-width: 1440px) === */
   @media (max-width: 1440px) {
     .legal-wrapper {
       width: 80%;
@@ -80,7 +83,6 @@ const legalNoticeStyles = `
     }
   }
 
-  /* === Responsive : Tablettes / Petits Écrans (max-width: 1024px) === */
   @media (max-width: 1024px) {
     .legal-wrapper {
       width: 90%;
@@ -88,6 +90,10 @@ const legalNoticeStyles = `
 
     .legal-title {
       font-size: 4.5rem;
+    }
+
+    .legal-title-fr {
+      white-space: normal; 
     }
 
     .legal-section h2 {
@@ -130,7 +136,8 @@ const LegalNotice = () => {
         <div className="legal-wrapper">
           <div className="legal-header">
             <h1 className="tangerine legal-title sectionTitle" id="titleLegal">
-              <span className="title span">Wettelike vermeldingn</span> Mentions légales
+              <span className="title span">Wettelike vermeldingn</span>
+              <span className="legal-title-fr">Mentions légales</span>
             </h1>
           </div>
 
@@ -194,6 +201,8 @@ const LegalNotice = () => {
               Vous pouvez configurer leur utilisation via votre navigateur ou un bandeau de gestion des cookies.
             </p>
           </div>
+
+          <ButtonHome text="Accueil" />
         </div>
       </div>
     </>

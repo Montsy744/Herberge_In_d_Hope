@@ -1,16 +1,20 @@
-import Navbar from "./Components/section/Navbar"
-import Hero from "./Components/section/Hero"
-import About from "./Components/section/About"
-import ChefWord from "./Components/section/ChefWord"
-import ImagesGallery from "./Components/ImagesGallery"
-import Services from "./Components/section/Services"
-import Carte from "./Components/section/Carte"
-import Info from "./Components/section/Info"
-import GalleryPhoto from "./Components/section/GalleryPhoto"
-import Contact from "./Components/section/Contact"
-import Footer from "./Components/section/Footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-import { liensImg1 } from "../constant/constant"
+import Navbar from "./Components/section/Navbar";
+import Hero from "./Components/section/Hero";
+import About from "./Components/section/About";
+import ChefWord from "./Components/section/ChefWord";
+import ImagesGallery from "./Components/ImagesGallery";
+import Services from "./Components/section/Services";
+import Info from "./Components/section/Info";
+import GalleryPhoto from "./Components/section/GalleryPhoto";
+import Contact from "./Components/section/Contact";
+import Footer from "./Components/section/Footer";
+import LegalNotice from "./Components/cnil/LegalNotice"; // Ajuste le chemin si besoin
+
+import { liensImg1 } from "../constant/constant";
 
 const appStyles = `
   .app-main {
@@ -19,25 +23,46 @@ const appStyles = `
   }
 `;
 
-function App() {
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+const Home = () => {
   return (
     <>
+      <Navbar />
+      <Hero />
+      <About />
+      <ChefWord />
+      <ImagesGallery images={liensImg1} />
+      <Services />
+      <Info />
+      <GalleryPhoto />
+      <Contact />
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
       <style>{appStyles}</style>
 
       <main className="app-main">
-        <Navbar />
-        <Hero />
-        <About />
-        <ChefWord />
-        <ImagesGallery images={ liensImg1 }/>
-        <Services />
-        <Info />
-        <GalleryPhoto />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mentions-legales" element={<LegalNotice />} />
+        </Routes>
         <Footer />
       </main>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

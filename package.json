@@ -17,6 +17,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-responsive": "^10.0.1",
+    "react-router-dom": "^7.18.5",
     "react-snowfall": "^2.4.0",
     "styled-components": "^6.3.9"
   },
