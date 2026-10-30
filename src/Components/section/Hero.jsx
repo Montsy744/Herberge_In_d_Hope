@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
-import SplitText from "gsap/src/SplitText";
 import gsap from "gsap";
+import SplitText from "gsap/SplitText";
 
 const heroStyles = `
   .hero-container {
@@ -44,6 +44,11 @@ const heroStyles = `
   .hero-subtitle {
     width: fit-content;
     text-align: left;
+  }
+
+  /* Style appliqué directement sans balise <strong> */
+  #titleHero {
+    font-weight: 700;
   }
 
   .hero-content-right {
@@ -164,7 +169,7 @@ const heroStyles = `
 
 const Hero = () => {
   useGSAP(() => {
-    const titleSplit = new SplitText("#titleHero", { type: "chars" });
+    const titleSplit = new SplitText("#titleHero", { type: "chars, words" });
 
     const parallaxTimeline = gsap.timeline({
       scrollTrigger: {
@@ -214,7 +219,7 @@ const Hero = () => {
               <span>Velekommen</span>
             </p>
             <p className="tangerineFontxl" id="titleHero">
-              <strong>Herberge in d'Hope</strong>
+              Herberge in d'Hope
             </p>
           </div>
 
