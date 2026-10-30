@@ -144,6 +144,66 @@ const contactStyles = `
       height: 18rem;
     }
   }
+
+  /* --- ADAPTATION RESPONSIVE MOBILE --- */
+  @media (max-width: 768px) {
+    .contact-container {
+      min-height: auto;
+      margin-top: 2rem !important;
+    }
+
+    .contact-wrapper {
+      width: 90%;
+      margin: 1rem 0;
+    }
+
+    .contact-heading {
+      font-size: 3.5rem !important;
+      line-height: 1.1 !important;
+      text-align: center;
+    }
+
+    .contact-wrapper-container {
+      margin-top: 1.5rem;
+    }
+
+    .contact-wrapper-container-img {
+      height: 14rem;
+      border-radius: 1rem;
+    }
+
+    .contact-wrapper-container-img img {
+      border-radius: 1rem;
+    }
+
+    /* Désactivation des effets glow lourds en mobile */
+    .contact-wrapper-container-img::before,
+    .contact-wrapper-container-img::after {
+      display: none;
+    }
+
+    .contact-info-wrapper {
+      flex-direction: column;
+      gap: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-heading {
+      font-size: 2.8rem !important;
+    }
+
+    .contact-wrapper-container-img {
+      height: 12rem;
+    }
+
+    .contact-info-wrapper {
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+  }
 `;
 
 const goToMaps = () => {
