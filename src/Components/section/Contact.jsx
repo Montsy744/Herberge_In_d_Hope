@@ -1,4 +1,5 @@
 import { GoogleMapsImg, GoogleMapsLink } from "../../../constant/constant";
+import ContactInfo from "../ContactInfo";
 
 const contactStyles = `
 
@@ -109,6 +110,15 @@ const contactStyles = `
     transform: scale(1.005);
   }
 
+  .contact-info-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+    align-items: center;
+    margin: 4rem 0;
+  }
+
   @media (max-width: 1440px) {
     .contact-wrapper {
       width: 80%;
@@ -154,8 +164,19 @@ const Contact = () => {
                         <div className="contact-wrapper-container-img" onClick={ goToMaps }>
                             <img src={ GoogleMapsImg } alt="Emplacement sur la carte" />
                         </div>
-                        <div>
-
+                        <div className="contact-info-wrapper">
+                            <ContactInfo 
+                              title="Nous trouver :"
+                              info="57 rue principale, 59470 Volckerinckhove"
+                            />
+                            <ContactInfo 
+                              title="Nous contacter par e-mail :"
+                              info="herbergeindhope@yahoo.fr"
+                            />
+                            <ContactInfo 
+                              title="Nous contacter par téléphone :"
+                              info="03 28 68 06 97"
+                            />
                         </div>
                     </div>
                 </div>
