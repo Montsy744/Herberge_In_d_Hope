@@ -13,7 +13,7 @@ const Footer = () => {
         align-items: center;
         gap: 3rem;
         width: 100%;
-        padding: 1rem 0 
+        padding: 1rem 0;
     }
 
     .left {
@@ -39,9 +39,12 @@ const Footer = () => {
     }
 
     .center-img {
-    
         width: 10rem;
+    }
 
+    .footer-logo {
+        width: 100%;
+        height: auto;
     }
 
     .footer-container-bottom {
@@ -69,7 +72,98 @@ const Footer = () => {
     .footer-separator {
         color: var(--primary);
     }
-    `
+
+    /* --- ADAPTATION RESPONSIVE MOBILE --- */
+    @media (max-width: 1024px) {
+        .footer-container-top {
+            gap: 1.5rem;
+        }
+
+        .left-text h1 {
+            font-size: 1.75rem;
+        }
+
+        .left-text h2,
+        .right p {
+            font-size: 1.1rem;
+        }
+
+        .center-img {
+            width: 8rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            padding: 0 1rem;
+        }
+
+        .footer-container-top {
+            flex-direction: column;
+            text-align: center;
+            gap: 1.5rem;
+            padding: 2rem 0 1.5rem 0;
+        }
+
+        /* Réordonnancement mobile : Logo en haut, puis Titre/Adresse, puis Copyright */
+        .center {
+            order: 1;
+        }
+
+        .left {
+            order: 2;
+            justify-content: center;
+        }
+
+        .right {
+            order: 3;
+        }
+
+        .left-text h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .left-text h2,
+        .right p {
+            font-size: 1rem;
+        }
+
+        .center-img {
+            width: 7rem;
+        }
+
+        .footer-container-bottom {
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 1.5rem 0;
+        }
+
+        /* Masquage des barre séparatrices horizontales en mode colonne */
+        .footer-separator {
+            display: none;
+        }
+
+        .footer-link {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .left-text h1 {
+            font-size: 1.8rem;
+        }
+
+        .left-text h2,
+        .right p {
+            font-size: 0.9rem;
+        }
+
+        .center-img {
+            width: 6rem;
+        }
+    }
+    `;
 
     return (
         <>
@@ -110,7 +204,7 @@ const Footer = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Footer;
