@@ -101,38 +101,112 @@ const servicesStyles = `
       text-align: left;
     }
   }
+
+  @media (max-width: 768px) {
+    .services-container {
+      min-height: auto;
+      padding: 4rem 1rem;
+    }
+
+    .services-wrapper {
+      max-width: 100%;
+    }
+
+    .titleService,
+    .titleService div,
+    .titleService span {
+      font-size: 4rem !important;
+      line-height: 1.2 !important;
+    }
+
+    .titleService {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .service-item {
+      margin-top: 1.5rem !important;
+      margin-bottom: 1.5rem !important;
+      text-align: center;
+    }
+
+    .service-item-right {
+      text-align: center;
+    }
+
+    .service-item li,
+    .textLeft,
+    .textRight {
+      text-align: center;
+    }
+
+    .services-footer {
+      margin-top: 2rem !important;
+      margin-bottom: 1rem !important;
+      padding: 0 0.5rem;
+    }
+
+    .service-footer-title {
+      font-size: 1.35rem;
+      line-height: 1.8rem;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .titleService {
+      font-size: 2rem !important;
+    }
+
+    .service-footer-title {
+      font-size: 1.15rem;
+      line-height: 1.6rem;
+    }
+  }
 `;
 
 const Services = () => {
   useGSAP(() => {
-    const heroSplit = new SplitText(".titleService", { type: "chars, words" });
-    gsap
-      .timeline({
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 0px)", () => {
+      const heroSplit = new SplitText(".titleService", { type: "chars, words" });
+      gsap.from(heroSplit.chars, {
+        scrollTrigger: {
+          trigger: "#nosService",
+          start: "top 30%",
+          end: "top 10%",
+          scrub: 1,
+        },
+        yPercent: 100,
+        opacity: 0,
+        duration: 2,
+        ease: "expo.out",
+        stagger: 0.4,
+      });
+    });
+
+    mm.add("(min-width: 769px)", () => {
+      gsap.from(".liService", {
         scrollTrigger: {
           trigger: "#nosService",
           start: "top 30%",
           end: "bottom 100%",
           scrub: 1,
         },
-      })
-      .from(heroSplit.chars, {
         yPercent: 100,
         opacity: 0,
-        duration: 2,
+        duration: 1.8,
         ease: "expo.out",
-        stagger: 0.4,
-      })
-      .from(
-        ".liService",
-        {
-          yPercent: 100,
-          opacity: 0,
-          duration: 1.8,
-          ease: "expo.out",
-          stagger: 0.2,
-        },
-        "-=0.5"
-      );
+        stagger: 0.2,
+      });
+    });
   });
 
   return (
