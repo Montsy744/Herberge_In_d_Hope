@@ -103,6 +103,10 @@ const Footer = () => {
                     <Link to="/confidentialite" className="footer-link bricoFont">
                         Politique de Confidentialité
                     </Link>
+                    <span className="footer-separator">|</span>
+                    <Link to="/cgu" className="footer-link bricoFont">
+                        CGU
+                    </Link>
                 </div>
             </div>
         </>

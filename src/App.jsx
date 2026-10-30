@@ -14,6 +14,7 @@ import Contact from "./Components/section/Contact";
 import Footer from "./Components/section/Footer";
 import LegalNotice from "./Components/cnil/LegalNotice";
 import PrivacyPolicy from "./Components/cnil/PrivacyPolicy";
+import CGU from "./Components/cnil/CGU";
 
 import { liensImg1 } from "../constant/constant";
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/confidentialite" element={<PrivacyPolicy />} />
+          <Route path="/cgu" element={<CGU />} />
         </Routes>
         <Footer />
       </main>
